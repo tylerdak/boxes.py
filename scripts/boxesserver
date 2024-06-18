@@ -266,6 +266,8 @@ class BServer:
             result.append("</table>")
             groupid += 1
 
+# Qr Code button doesnt work so im leaving it here for now
+# <button name="render" value="3" formtarget="_blank">{_("QR Code")}</button>
         result.append(f"""
 <input type="hidden" name="language" id="language" value="{lang_name}">
 
@@ -273,7 +275,6 @@ class BServer:
  <button name="render" value="1" formtarget="_blank">{_("Generate")}</button>
  <button name="render" value="2" formtarget="_self">{_("Download")}</button>
  <button name="render" value="0" formtarget="_self">{_("Save to URL")}</button>
-<button name="render" value="3" formtarget="_blank">{_("QR Code")}</button>
 </p>
 </form>
 </div>

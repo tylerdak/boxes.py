@@ -1,3 +1,28 @@
+Example docker-compose:
+-----------------------
+::
+
+  x-logging:
+    &default-logging
+    options:
+      max-size: "10m"
+      max-file: "3"
+
+::
+
+  services:
+    boxes-py:
+      build:
+        context: ./boxes
+        dockerfile: ./scripts/Dockerfile
+      restart: unless-stopped
+      container_name: boxes-py
+      environment:
+        PYTHONUNBUFFERED: 1
+      ports:
+        - '4444:8000'
+      logging: *default-logging
+
 About Boxes.py
 ==============
 

@@ -8,8 +8,6 @@ Example docker-compose:
       max-size: "10m"
       max-file: "3"
 
-::
-
   services:
     boxes-py:
       build:

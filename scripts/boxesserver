@@ -707,5 +707,5 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 else:
-    boxserver = BServer(url_prefix='/boxes.py', static_url="https://florianfesti.github.io/boxes/static")
+    boxserver = BServer(url_prefix='/boxes.py', static_url="/static")
     application = boxserver.serve
